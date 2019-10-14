@@ -9,6 +9,7 @@ const Flow = {};
 
 Temperature.createObservable = function () {
     return new Observable(subscriber => {
+        subscriber.next(0);
         tempChannel.on('connection', (socket) => {;
             socket.on('value', (value) => subscriber.next(value));
         });
@@ -17,6 +18,7 @@ Temperature.createObservable = function () {
 
 Flow.createObservable = function () {
     return new Observable(subscriber => {
+        subscriber.next(0);
         flowChannel.on('connection', (socket) => {
             socket.on('value', (value) => subscriber.next(value));
         });
