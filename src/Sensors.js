@@ -4,10 +4,10 @@ import {Observable} from 'rxjs';
 const tempChannel = io.of('/temperature');
 const flowChannel = io.of('/flow');
 
-const temperature = {};
-const flow = {};
+const Temperature = {};
+const Flow = {};
 
-temperature.createObservable = function () {
+Temperature.createObservable = function () {
     return new Observable(subscriber => {
         tempChannel.on('connection', (socket) => {;
             socket.on('value', (value) => subscriber.next(value));
@@ -15,7 +15,7 @@ temperature.createObservable = function () {
     });
 };
 
-flow.createObservable = function () {
+Flow.createObservable = function () {
     return new Observable(subscriber => {
         flowChannel.on('connection', (socket) => {
             socket.on('value', (value) => subscriber.next(value));
@@ -23,5 +23,4 @@ flow.createObservable = function () {
     });
 }
 
-export const Temperature = temperature;
-export const Flow = flow;
+export {Temperature, Flow};

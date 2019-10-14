@@ -1,3 +1,5 @@
+require('dotenv').config();
+require('./services/WebServer');
 import {Temperature, Flow} from './Sensors';
 
 Temperature.createObservable().subscribe((value) => {
