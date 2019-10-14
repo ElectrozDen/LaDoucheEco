@@ -5,3 +5,4 @@ const fitness = google.fitness({
     version: 'v1',
     auth: userAuth
 });
+

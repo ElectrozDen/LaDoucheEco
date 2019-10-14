@@ -26,6 +26,7 @@
     "dotenv": "^8.1.0",
     "googleapis": "^43.0.0",
     "polka": "^0.5.2",
+    "request": "^2.88.0",
     "rxjs": "^6.5.3",
     "socket.io": "^2.3.0"
   }

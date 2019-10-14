@@ -5,7 +5,8 @@ const path_credentials = 'credentials.json';
 
 const scopes = [
     'https://www.googleapis.com/auth/fitness.activity.read',
-    'https://www.googleapis.com/auth/fitness.activity.write'
+    'https://www.googleapis.com/auth/fitness.activity.write',
+    'https://www.googleapis.com/auth/spreadsheets'
 ];
 
 
