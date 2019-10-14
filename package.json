@@ -1,0 +1,29 @@
+{
+  "name": "ecoshower",
+  "version": "1.0.0",
+  "description": "<h1 align=\"center\">La Douche Eco</h1>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ElectrozDen/LaDoucheEco.git"
+  },
+  "author": "Roquet-Dolomanova Denys, Batcwa Kienan, Nespoulous François",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ElectrozDen/LaDoucheEco/issues"
+  },
+  "homepage": "https://github.com/ElectrozDen/LaDoucheEco#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3"
+  },
+  "dependencies": {
+    "@babel/node": "^7.6.3",
+    "rxjs": "^6.5.3",
+    "socket.io": "^2.3.0"
+  }
+}
