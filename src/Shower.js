@@ -1,6 +1,7 @@
 require('dotenv').config();
 require('./services/WebServer');
 import {Temperature, Flow} from './Sensors';
+import {saveShower} from './services/GoogleSheet';
 
 class Data {
 
@@ -41,7 +42,8 @@ class Data {
 		this.shower_ended = true;
 		console.log(`total time: ${this.total_time() / 1000} seconds`);
 		console.log(`temp average: ${this.average_temperature()}`);
-		console.log(`flow average: ${this.average_flow()}`)
+        console.log(`flow average: ${this.average_flow()}`)
+        saveShower(this.total_time() / 1000, this.average_temperature(), this.average_flow());
 	}
 
 	total_time() {

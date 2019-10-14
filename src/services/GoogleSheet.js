@@ -6,16 +6,20 @@ const sheets = google.sheets({
     auth: userAuth
 });
 
-function newShower() {
-    const resource = {
-        properties: {
-          title: 'lel',
-        },
-      };
-    sheets.spreadsheets.create((err, spreadsheet) => {
-        console.log(spreadsheet.spreadsheetId);
+async function saveShower(time, temp, flow) {
+    const spreadsheet = await sheets.spreadsheets.create();
+    let values = [['Time', 'Temp', 'Flow'],[time, temp, flow]];
+    
+    await sheets.spreadsheets.values.update({
+        range: 'A1',
+        spreadsheetId: spreadsheet.data.spreadsheetId,
+        valueInputOption: 'USER_ENTERED',
+        requestBody: {
+            values: values
+        }
+        
     });
 }
 
-export {newShower};
+export {saveShower};
 
